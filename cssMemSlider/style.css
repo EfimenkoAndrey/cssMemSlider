@@ -23,8 +23,8 @@ body {
 
 .wrapper {
 	position: relative;
-	width: 700px;
-	height: 400px;
+	width: 48vw;
+	height: 20rem;
 	margin: 100px auto 0;
 }
 
@@ -50,57 +50,107 @@ body {
 
 .slide-1 {
 	background-image: url('./assets/images/camaro.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .slide-2 {
 	background-image: url('./assets/images/dodge.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .slide-3 {
 	background-image: url('./assets/images/ford.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .slide-4 {
 	background-image: url('./assets/images/bmw.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.quotes {
+	position: relative;
+	width: inherit;
+	height: inherit;
+	margin-top: 1.2rem;
+	padding-left: 0.8rem;
+	overflow: hidden;
+}
+
+.quote {
+	position: absolute;
+	font-family: 'Dancing Script', cursive;
+	font-size: 2rem;
+	color: #fff;
+	transform: scale(1.1);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	opacity: 0;
+	z-index: 0;
 }
 
 .wrapper .controls {
 	display: flex;
 	justify-content: center;
 	width: inherit;
-	margin-top: 15px;
+	margin-top: 1rem;
 }
 .controls label + label {
-	margin-left: 20px;
+	margin-left: .6rem;
 }
-.wrapper label {
-	display: inline-block;
-	position: relative;
-	width: 16px;
-	height: 16px;
-	border-radius: 50%;
+
+.label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
 	cursor: pointer;
-	transition: background ease-in-out .3s;
 }
 
-.wrapper label::after {
-	content: " ";
-	display: block;
-	position: absolute;
-	left: -2px;
-	top: -2px;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
+.label > div {
+	width: 40%;
+	height: 40%;
 	border: 1px solid #ddd;
+	border-radius: 50%;
+	transition: background ease-in-out .5s;
 }
 
-.wrapper label:hover,
-#slider-1:checked ~ .controls label:nth-of-type(1),
-#slider-2:checked ~ .controls label:nth-of-type(2),
-#slider-3:checked ~ .controls label:nth-of-type(3),
-#slider-4:checked ~ .controls label:nth-of-type(4) {
-	background: #ddd;
+.label:hover div{
+	background-color: #ddd;
+}
+.label:active div{
+	background-color: blue;
 }
 
+.slides {
+	transform: scale(1.5);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	opacity: 0;
+	z-index: 0;
+}
 
+#slide-1:checked ~ .slider > .slide-1,
+#slide-2:checked ~ .slider > .slide-2,
+#slide-3:checked ~ .slider > .slide-3,
+#slide-4:checked ~ .slider > .slide-4 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
+
+#slide-1:checked ~ .quotes > .quote-1,
+#slide-2:checked ~ .quotes > .quote-2,
+#slide-3:checked ~ .quotes > .quote-3,
+#slide-4:checked ~ .quotes > .quote-4 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
 
 
 
