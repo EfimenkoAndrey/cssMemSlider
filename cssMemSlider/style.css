@@ -1,0 +1,64 @@
+/* Normalizes */
+:root {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	background-image: url('assets/images/bg.jpg');
+	background-position: center 38px;
+}
+/* ============== */
+
+
+.wrapper {
+	position: relative;
+	width: 700px;
+	height: 400px;
+	margin: 100px auto 0;
+}
+
+.wrapper > input {
+	display: none;
+}
+
+.slider {
+	position: relative;
+	overflow: hidden;
+	width: inherit;
+	height: inherit;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	background-color: #ddd;
+}
+
+
+.slides {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+
+.slide-1 {
+	background-image: url('./assets/images/camaro.jpg');
+}
+.slide-2 {
+	background-image: url('./assets/images/dodge.jpg');
+}
+.slide-3 {
+	background-image: url('./assets/images/ford.jpg');
+}
+.slide-4 {
+	background-image: url('./assets/images/bmw.jpg');
+}
+
+
