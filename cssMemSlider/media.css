@@ -3,7 +3,10 @@
 		width: 80vw;
 	}
 	.slider {
-		height: 35vh;
+		height: 40vh;
+	}
+	.flex {
+		display: block;
 	}
 }
 
@@ -24,6 +27,7 @@
 		width: 95vw;
 	}
 	.slider {
-		height: 25vh;
+		height: 30vh;
 	}
+	
 }

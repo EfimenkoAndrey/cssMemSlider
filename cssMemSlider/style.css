@@ -71,19 +71,26 @@ body {
 	background-repeat: no-repeat;
 }
 
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
 .quotes {
 	position: relative;
-	width: 100%;
+	width: 75%;
 	height: 20vh;
 	margin-top: 1.2rem;
 	padding-left: 0.8rem;
 	overflow: hidden;
+	order: 0;
 }
 
 .quote {
 	position: absolute;
 	font-family: 'Dancing Script', cursive;
 	font-size: 2rem;
+	line-height: 1em;
 	color: #fff;
 	transform: scale(1.1);
 	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
@@ -96,6 +103,7 @@ body {
 	justify-content: center;
 	width: inherit;
 	margin-top: 1rem;
+	order: 1;
 }
 
 .label {
@@ -139,14 +147,14 @@ body {
 	transform: scale(1);
 }
 
-#slide-1:checked ~ .quotes > .quote-1,
-#slide-2:checked ~ .quotes > .quote-2,
-#slide-3:checked ~ .quotes > .quote-3,
-#slide-4:checked ~ .quotes > .quote-4 {
+#slide-1:checked ~ .flex .quotes > .quote-1,
+#slide-2:checked ~ .flex .quotes > .quote-2,
+#slide-3:checked ~ .flex .quotes > .quote-3,
+#slide-4:checked ~ .flex .quotes > .quote-4 {
 	opacity: 1;
-	z-index: 1;
 	transform: scale(1);
 }
+
 
 
 
